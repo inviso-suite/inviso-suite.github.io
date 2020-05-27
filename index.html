@@ -14,11 +14,11 @@
 
     <div id="main">
         <div class="section">Abstract</div>
-        <p class="firstParagraph">The continued growth of modern VR (virtual reality) platforms into mass adoption is fundamentally driven 
-            by the work of content creators who offer engaging experiences. It is therefore essential to design accessible creativity 
-            support tools that can facilitate the work of a broad range of practitioners in this domain. In this paper, we focus on 
-            one facet of VR content creation, namely immersive audio design. We discuss a suite of design tools that enable both novice 
-            and expert users to rapidly prototype immersive sonic environments across desktop, virtual reality and augmented reality platforms. 
+        <p class="firstParagraph">
+            The continued growth of modern VR (virtual reality) and its mass adoption is driven by content creators who offer engaging experiences. 
+            Therefore, it is essential to design accessible creativity support tools that can facilitate the work of a broad range of practitioners in this domain. 
+            In this paper, we focus on one facet of VR content creation, immersive audio design. We discuss a suite of design tools that enable both novice 
+            and expert users to rapidly prototype immersive sonic environments across desktop, VR and AR (augmented reality) platforms. 
             We discuss the design considerations adopted for each implementation, and how the individual systems informed one another in terms of 
             interaction design. We then offer a preliminary evaluation of these systems with reports from ﬁrst-time users. Finally, we discuss
             our road-map for improving individual and collaborative creative experiences across platforms and realities in the context of immersive audio.
@@ -26,42 +26,35 @@
         <div class="section">Introduction</div>
         <p class="firstParagraph">
             Creativity support tools play an important role in expanding the user base of media platforms. With emerging technologies 
-            in particular, making such tools more accessible can support the sustainability of a platform by way of facilitating the 
-            work of content creators who will design engaging experiences that will draw in more users. The current selection of design 
-            tools for VR content creators are arguably geared towards experts and can be prohibitive for inexperienced designers. 
-            Furthermore, the existing VR design workﬂows are less intuitive than that of many modern media design tools due to the 
-            separation between the design and experience stages involved in VR development.
+            in particular, making such tools more accessible can support the sustainability of a platform by facilitating the work of 
+            content creators who design engaging experiences that attract more users. Current design tools for VR content creators are 
+            arguably geared towards experts and can be prohibitive for inexperienced designers. Furthermore, existing VR design workflows 
+            are less intuitive than many modern media design tools due to the separation between the design and experience stages involved 
+            in VR development.
         </p>
         <p>
-            In this paper, we discuss a suite of immersive audio design tools, named Inviso XR, that can support workﬂows across desktop, 
-            virtual reality and augmented reality platforms. Designed to cater for both novice and expert users, these tools facilitate 
-            diverse creative experiences and within-XR content creation. We detail the overall design considerations behind each component 
-            of this suite. We then identify some of the challenges we encountered while implementing functionality across different platforms. 
-            Finally, we offer the results of a preliminary study designed to reveal usability considerations that will inform the next phase of our work on this suite.
+            In this poster, we discuss a suite of immersive audio design tools, named Inviso XR, that supports workﬂows across desktop, 
+            VR and AR platforms. These tools are designed to facilitate diverse creative experiences and within-XR content creation for 
+            users of all skill levels. We detail the overall design considerations behind each component of this suite and identify 
+            implementation challenges across different platforms. Finally, we offer the results of a preliminary study designed to reveal 
+            usability considerations that will inform the next phase of our work on this suite.
         </p>
 
         <div class="section">Related Work</div>
         <p class="firstParagraph">
             Many existing tools enable the design of spatial audio scenes on desktop computers [<a href="#2">2</a>, <a href="#7">7</a>, <a href="#3">3</a>]. In these tools, the user is often 
             represented with a stationary listener node at the center of the virtual space as they create complex sonic environments with such 
-            components as point sources, directional cones, and reverberant zones.
+            components as point sources, directional cones, and reverberant zones. 
         </p>
-        <p>
-            A growing number of projects implement similar functionality in VR. In their exploration of audio engineering in VR, Jordan et al. 
-            created a system where predeﬁned sound sources can be attached to objects in the scene and manipulated with the Oculus Touch controllers [<a href="#4">4</a>]. 
-            In a user study about this system, the researchers found that the users were able to easily utilize grab-based controls, but had trouble 
-            using a laser pointer mechanism to control objects from a distance.
-        </p>
-        <p>
-            Other VR tools function as an immersive controller layer over more traditional digital audio workstations (DAW). For instance, 
-            in Dear VR Spatial connect, <sup>1</sup> the tracks of a DAW session is visualized in VR as spherical sound objects, which the user can reposition 
-            in 3D space to change how the corresponding sounds are spatialized.
-        </p>
-        <p style="margin-bottom: 0px;">
-            In their sound art installation, which was designed to promote collaborative experiences in audio augmented reality, Kiefer and Chevalier 
-            designed a system where they augmented the physical components of their installation with audio elements in AR [<a href="#5">5</a>]. In an evaluation of 
-            this system, the users reported a high degree of immersion to the extent of confusing whether sounds originated from the physical environment or AR.
-        </p>
+        <p>Increasingly more tools implement similar functionalities in VR: </p>
+        <ul>
+            <li class="extraListPadding">Jordan et al. created a system where predefined sound sources can be attached 
+                to objects in the scene and manipulated with the Oculus Touch controllers [<a href="#4">4</a>].</li>
+            <li style="padding-bottom: 6px;">Dear VR Spatial connect <sup>1</sup> functions as an immersive controller layer over more traditional digital audio workstations (DAW),
+                by visualizing DAW tracks as spatialized, spherical sound objects.</li>
+            <li class="extraListPadding">Kiefer and Cheavlier designed a highly immersive system where they augmented the physical components of their sound art installation with audio elements in 
+                AR[<a href="#5">5</a>].</li>
+        </ul>
 
         <p style="padding: 0; margin-top: 5px;"><sup>1</sup><a href="https://www.dearvr.com/products/dearvr-spatial-connect" target="_blank" style="font-size: 15px;">https://www.dearvr.com/products/dearvr-spatial-connect</a></p>
 
@@ -86,8 +79,8 @@
         <p class="firstParagraph">
             VR presents an opportunity to overcome two common limitations in spatial audio design: first, in spatial audio tools 
             that implement surround audio rendering, the 3D virtual space is often controlled with a 2D interface on a 2D display. 
-            Second, in these tools, the visuals are not spatially mapped to the acoustic output, offering users what is essentially a 3rd-person 
-            control over the design. In VR however, the dimensional disparity between the interface and the content, as well as the the 
+            Second, in these tools, the visuals are not spatially mapped to the acoustic output, offering users a 3rd-person 
+            control over the design. In VR however, the dimensional disparity between the interface and the content, as well as the
             displacement between the virtual listener node and the user’s head can be eliminated by giving the user a first-person view into 
             a binaural audio scene.
         </p>
@@ -264,7 +257,7 @@
             </tr>           
         </table>
 
-        <a href="#top">Return to top</a>
+        <a href="#top">Return to the top</a>
     </div>
 
 
