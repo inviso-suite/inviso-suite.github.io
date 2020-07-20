@@ -4,7 +4,7 @@
     <title>Inviso NIME Poster</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 <head>
-        
+
 </head>
 
 <body>
@@ -15,58 +15,51 @@
     <div id="main">
         <div class="section">Abstract</div>
         <p class="firstParagraph">
-            The continued growth of modern VR (virtual reality) and its mass adoption is driven by content creators who offer engaging experiences. 
-            Therefore, it is essential to design accessible creativity support tools that can facilitate the work of a broad range of practitioners in this domain. 
-            In this paper, we focus on one facet of VR content creation, immersive audio design. We discuss a suite of design tools that enable both novice 
-            and expert users to rapidly prototype immersive sonic environments across desktop, VR and AR (augmented reality) platforms. 
-            We discuss the design considerations adopted for each implementation, and how the individual systems informed one another in terms of 
+            The continued growth of modern VR (virtual reality) and its mass adoption is driven by content creators who offer engaging experiences.
+            Therefore, it is essential to design accessible creativity support tools that can facilitate the work of a broad range of practitioners in this domain.
+            In this paper, we focus on one facet of VR content creation, immersive audio design. We discuss a suite of design tools that enable both novice
+            and expert users to rapidly prototype immersive sonic environments across desktop, VR and AR (augmented reality) platforms.
+            We discuss the design considerations adopted for each implementation, and how the individual systems informed one another in terms of
             interaction design. We then offer a preliminary evaluation of these systems with reports from ﬁrst-time users. Finally, we discuss
             our road-map for improving individual and collaborative creative experiences across platforms and realities in the context of immersive audio.
         </p>
         <div class="section">Introduction</div>
         <p class="firstParagraph">
-            Creativity support tools play an important role in expanding the user base of media platforms. With emerging technologies 
-            in particular, making such tools more accessible can support the sustainability of a platform by facilitating the work of 
-            content creators who design engaging experiences that attract more users. Current design tools for VR content creators are 
-            arguably geared towards experts and can be prohibitive for inexperienced designers. Furthermore, existing VR design workflows 
-            are less intuitive than many modern media design tools due to the separation between the design and experience stages involved 
-            in VR development.
-        </p>
-        <p>
-            In this poster, we discuss a suite of immersive audio design tools, named Inviso XR, that supports workﬂows across desktop, 
-            VR and AR platforms. These tools are designed to facilitate diverse creative experiences and within-XR content creation for 
-            users of all skill levels. We detail the overall design considerations behind each component of this suite and identify 
-            implementation challenges across different platforms. Finally, we offer the results of a preliminary study designed to reveal 
-            usability considerations that will inform the next phase of our work on this suite.
+            Current design tools for VR content creators are
+            arguably geared towards experts and can be prohibitive for inexperienced designers. Furthermore, existing VR design workflows
+            are less intuitive than many modern media design tools due to the separation between the design and experience stages involved
+            in VR development. In this poster, we discuss a suite of immersive audio design tools, named Inviso XR, that supports workﬂows across desktop,
+            VR and AR platforms. These tools are designed to facilitate diverse creative experiences and within-XR content creation for
+            users of all skill levels.
         </p>
 
         <div class="section">Related Work</div>
         <p class="firstParagraph">
-            Many existing tools enable the design of spatial audio scenes on desktop computers [<a href="#2">2</a>, <a href="#7">7</a>, <a href="#3">3</a>]. In these tools, the user is often 
-            represented with a stationary listener node at the center of the virtual space as they create complex sonic environments with such 
-            components as point sources, directional cones, and reverberant zones. 
+            Many existing tools enable the design of spatial audio scenes on desktop computers [<a href="#2">2</a>, <a href="#7">7</a>, <a href="#3">3</a>]. In these tools, the user is often
+            represented with a stationary listener node at the center of the virtual space as they create complex sonic environments with such
+            components as point sources, directional cones, and reverberant zones.
         </p>
         <p>Increasingly more tools implement similar functionality in VR: </p>
         <ul>
-            <li class="extraListPadding">Jordan et al. created a system where predefined sound sources can be attached 
+            <li class="extraListPadding">Jordan et al. created a system where predefined sound sources can be attached
                 to objects in the scene and manipulated with the Oculus Touch controllers [<a href="#4">4</a>].</li>
             <li style="padding-bottom: 6px;"><a href="https://www.dearvr.com/products/dearvr-spatial-connect" target="_blank">Dear VR Spatial connect</a> functions as an immersive controller layer over more traditional digital audio workstations (DAW),
                 by visualizing DAW tracks as spatialized, spherical sound objects.</li>
-            <li class="extraListPadding">Kiefer and Cheavlier designed a highly immersive system where they augmented the physical components of their sound art installation with audio elements in 
+            <li class="extraListPadding">Kiefer and Cheavlier designed a highly immersive system where they augmented the physical components of their sound art installation with audio elements in
                 AR[<a href="#5">5</a>].</li>
         </ul>
 
 <!--         <p style="padding: 0; margin-top: 5px;"><sup>1</sup><a href="https://www.dearvr.com/products/dearvr-spatial-connect" target="_blank" style="font-size: 15px;">https://www.dearvr.com/products/dearvr-spatial-connect</a></p> -->
 
         <div class="section">Inviso</div>
-        <p class="firstParagraph">Inviso is a browser-based application for designing immersive sonic environments. As a creativity support 
+        <p class="firstParagraph">Inviso is a browser-based application for designing immersive sonic environments. As a creativity support
             tool, it is designed to enable non-experts to engage with immersive audio creatively while providing functionality
-             that can satisfy the needs of expert users. Using open-source APIs such as WebGL and Web Audio, it implements 
-             fundamental components of spatial audio such as sound objects, sound cones, and sound zones. The user can navigate 
-             through the scene, as seen in Fig. 1, using the W, A, S, D keys on the keyboard. The binaural output of the system is 
-             based on the design of the environment and the virtual listener node’s position in it. The sound objects can be 
-             populated with an arbitrary number of cones that can have variable base radius and height properties. The user can 
-             also define arbitrary motion trajectories for each object. A more detailed description of Inviso’s functionality is 
+             that can satisfy the needs of expert users. Using open-source APIs such as WebGL and Web Audio, it implements
+             fundamental components of spatial audio such as sound objects, sound cones, and sound zones. The user can navigate
+             through the scene, as seen in Fig. 1, using the W, A, S, D keys on the keyboard. The binaural output of the system is
+             based on the design of the environment and the virtual listener node’s position in it. The sound objects can be
+             populated with an arbitrary number of cones that can have variable base radius and height properties. The user can
+             also define arbitrary motion trajectories for each object. A more detailed description of Inviso’s functionality is
              offered in a previous publication [<a href="#1">1</a>]. The tool itself is available online at <a href="http://inviso.cc" target="_blank">http://inviso.cc</a>.
         </p>
 
@@ -77,18 +70,18 @@
 
         <div class="section">Inviso VR</div>
         <p class="firstParagraph">
-            VR presents an opportunity to overcome two common limitations in spatial audio design: first, in spatial audio tools 
-            that implement surround audio rendering, the 3D virtual space is often controlled with a 2D interface on a 2D display. 
-            Second, in these tools, the visuals are not spatially mapped to the acoustic output, offering users a 3rd-person 
+            VR presents an opportunity to overcome two common limitations in spatial audio design: first, in spatial audio tools
+            that implement surround audio rendering, the 3D virtual space is often controlled with a 2D interface on a 2D display.
+            Second, in these tools, the visuals are not spatially mapped to the acoustic output, offering users a 3rd-person
             control over the design. In VR however, the dimensional disparity between the interface and the content, as well as the
-            displacement between the virtual listener node and the user’s head can be eliminated by giving the user a first-person view into 
+            displacement between the virtual listener node and the user’s head can be eliminated by giving the user a first-person view into
             a binaural audio scene.
         </p>
         <p>
-            In the VR implementation of Inviso, seen in Fig. 2, we offer a room-scale representation of a virtual audio environment 
-            with visual representations of the sound elements akin to those in the desktop version. The user can generate an arbitrary number 
-            of sound objects, populate them with sound cones, and give them motion trajectories. Once an object or a cone is created, these can 
-            be manipulated with intuitive grab-and-move actions. When trajectory drawing is activated, moving an object creates a spline curve, 
+            In the VR implementation of Inviso, seen in Fig. 2, we offer a room-scale representation of a virtual audio environment
+            with visual representations of the sound elements akin to those in the desktop version. The user can generate an arbitrary number
+            of sound objects, populate them with sound cones, and give them motion trajectories. Once an object or a cone is created, these can
+            be manipulated with intuitive grab-and-move actions. When trajectory drawing is activated, moving an object creates a spline curve,
             which the object will follow once released. All sounds are rendered to binaural audio using Google Resonance Audio.
         </p>
 
@@ -99,15 +92,15 @@
 
         <div class="section">Inviso AR</div>
         <p class="firstParagraph">
-            The AR version of Inviso ports the core functionality of the browser system to handheld AR platforms. The plane-detecting systems 
-            used to save generated objects in world space allow AR environments to be created on devices such as tablets and phones. Inviso AR 
-            utilizes the ARKit and ARCore frameworks for device pose estimation. Furthermore, plane detection available in these platforms are 
-            used to implement acoustic and visual occlusion of objects. Inside-out motion tracking based on plane detection is used to allow 
+            The AR version of Inviso ports the core functionality of the browser system to handheld AR platforms. The plane-detecting systems
+            used to save generated objects in world space allow AR environments to be created on devices such as tablets and phones. Inviso AR
+            utilizes the ARKit and ARCore frameworks for device pose estimation. Furthermore, plane detection available in these platforms are
+            used to implement acoustic and visual occlusion of objects. Inside-out motion tracking based on plane detection is used to allow
             users to clearly see how the objects in world space interact with their environment.
         </p>
         <p>
-            As seen in Fig. 3, the viewport primarily consists of the 3D augmented camera overlay with a context-dependent 2D interface on the 
-            right. Inviso AR's UI implements a variety of input methods including AR interactions as well as those achieved with standard buttons 
+            As seen in Fig. 3, the viewport primarily consists of the 3D augmented camera overlay with a context-dependent 2D interface on the
+            right. Inviso AR's UI implements a variety of input methods including AR interactions as well as those achieved with standard buttons
             and sliders. Placing and moving objects are room-scale interactions that depend on the position of the device in 3D space, while the
              manipulation of cones is achieved by touch controls such the pinch gesture used for resizing cones.
         </p>
@@ -123,47 +116,47 @@
         </p>
         <div class="subsection">Desktop Implementation</div>
         <p class="firstParagraph">
-            The desktop version of Inviso adopts common UI elements such as buttons, sliders, and number boxes. Furthermore, it uses contextual menus 
-            that appear based on object selection to give the user parametric control over object attributes. One of the main challenges in designing a 
-            desktop interface for a 3D audio tool is the handling of the spatial dimensions with a lower-dimensional input device (i.e. a 2D trackpad or mouse), 
-            and the display of this content on a 2D screen. Among the methods to alleviate these challenges are the use of axis-handles or multiple views that 
-            display the same object from different reference points. Inviso adopts a two-tiered approach to the manipulation of sound objects and trajectories 
-            in 3D. An aerial view allows the user to move the sounds only on the horizontal plane. If, however, the user tilts the camera view beyond a certain 
-            degree, the system switches into an altitude mode, where the lateral position of the objects become fixed and they can only be moved vertically. 
-            This limited approach exploits the human auditory system's ability to localize sounds more accurately on the horizontal plane [<a href="#6">6</a>], 
+            The desktop version of Inviso adopts common UI elements such as buttons, sliders, and number boxes. Furthermore, it uses contextual menus
+            that appear based on object selection to give the user parametric control over object attributes. One of the main challenges in designing a
+            desktop interface for a 3D audio tool is the handling of the spatial dimensions with a lower-dimensional input device (i.e. a 2D trackpad or mouse),
+            and the display of this content on a 2D screen. Among the methods to alleviate these challenges are the use of axis-handles or multiple views that
+            display the same object from different reference points. Inviso adopts a two-tiered approach to the manipulation of sound objects and trajectories
+            in 3D. An aerial view allows the user to move the sounds only on the horizontal plane. If, however, the user tilts the camera view beyond a certain
+            degree, the system switches into an altitude mode, where the lateral position of the objects become fixed and they can only be moved vertically.
+            This limited approach exploits the human auditory system's ability to localize sounds more accurately on the horizontal plane [<a href="#6">6</a>],
             while at the same time enabling the manipulation of object elevation in the same viewport without causing perspective ambiguities.
         </p>
         <div class="subsection">VR Implementation</div>
         <p class="firstParagraph">
-            While the VR implementation of Inviso simplifies some of the desktop interactions with intuitive room-scale grab-and-move actions, it also brings 
-            up design challenges with regards to the parametric and menu-based UI elements that are easier to control with a 2D input devices, such as a mouse 
-            or a trackpad. Using modern UI standards for VR, we implemented virtual representations of the Oculus Touch controllers with persistent labels for 
-            each button, as seen in Fig. 2, to reduce the need for memorizing button functionality. Furthermore, global interactions like selecting 
-            and deselecting objects are mirrored on both hands to minimize the variety of interactions between the two controllers. Other UI elements, such as volume 
+            While the VR implementation of Inviso simplifies some of the desktop interactions with intuitive room-scale grab-and-move actions, it also brings
+            up design challenges with regards to the parametric and menu-based UI elements that are easier to control with a 2D input devices, such as a mouse
+            or a trackpad. Using modern UI standards for VR, we implemented virtual representations of the Oculus Touch controllers with persistent labels for
+            each button, as seen in Fig. 2, to reduce the need for memorizing button functionality. Furthermore, global interactions like selecting
+            and deselecting objects are mirrored on both hands to minimize the variety of interactions between the two controllers. Other UI elements, such as volume
             controls and sound selection menus are navigated with the thumbsticks on the Touch Controller.
         </p>
         <div class="subsection">AR Implementation</div>
         <p class="firstParagraph">
             The AR version of Inviso combines standard 2D UI elements such as buttons and sliders from the desktop version with room-scale interactions. Since AR depends
-             on filling the screen with a viewport into the augmented world, one major challenge was determining a balance between 2D UI elements that offer direct control 
+             on filling the screen with a viewport into the augmented world, one major challenge was determining a balance between 2D UI elements that offer direct control
              but clutter the screen and direct interactions with the objects in AR space itself, such as moving sound objects and pinching to change the base radius of cones.
         </p>
         <p>
-            Another design challenge for the AR version originates from having multiple points of spatial reference when executing interactions with 3D objects overlaid onto a 
-            3D space that is viewed and controlled with a 2D input mechanism. Specifically, when rotating a cone around a sphere, the virtual object, the hand-held device and 
-            the user's touch input operate on different spatial layers, causing potential conflicts between user intent and system response. Drawing inspiration from the desktop 
-            version that enables cone placements on the visible surface of a sphere but requires the sphere itself to be rotated to place cones elsewhere, we limited cone placement 
-            to the surface of the sphere that the AR device's camera is facing. This yielded natural interactions where the user can hold onto a cone and move around the sphere to 
+            Another design challenge for the AR version originates from having multiple points of spatial reference when executing interactions with 3D objects overlaid onto a
+            3D space that is viewed and controlled with a 2D input mechanism. Specifically, when rotating a cone around a sphere, the virtual object, the hand-held device and
+            the user's touch input operate on different spatial layers, causing potential conflicts between user intent and system response. Drawing inspiration from the desktop
+            version that enables cone placements on the visible surface of a sphere but requires the sphere itself to be rotated to place cones elsewhere, we limited cone placement
+            to the surface of the sphere that the AR device's camera is facing. This yielded natural interactions where the user can hold onto a cone and move around the sphere to
             place it in an opposing direction.
         </p>
         <div class="section">Evaluation</div>
-        <p class="firstParagraph"> 
-            We conducted a preliminary evaluation of these three systems to better understand the usability challenges and opportunities in each platform. We recruited 4 users to 
+        <p class="firstParagraph">
+            We conducted a preliminary evaluation of these three systems to better understand the usability challenges and opportunities in each platform. We recruited 4 users to
             complete the same design task with each system and respond to questions about their experience in written format.
         </p>
         <div class="subsection">Task</div>
         <p class="firstParagraph">
-            The users were given a task to prototype a simple sonic environment with three elements: a stationary sound object, a stationary sound object with two cones, and a 
+            The users were given a task to prototype a simple sonic environment with three elements: a stationary sound object, a stationary sound object with two cones, and a
             sound object with two cones on a trajectory. They were first asked to sketch a plan for their design on paper. They then implemented this plan in all three environments.
              As a follow-up, they were asked to respond to a survey including the following questions:
         </p>
@@ -188,11 +181,30 @@
         <p>One user described the mapping between the sounds and visuals to be the most convincing in the desktop version and attributed this to being able to see an overview of the relationship between the sound sources and the listener node. While they found the desktop experience to be the most compelling for the same reason, they added that if they had more experience with the VR version, it would likely be their preferred platform for design. Similarly, two other users reported that, while the UI in the VR version felt like a barrier for design, this mainly had to do with their lack of experience with the interface.</p>
         <p>Three out of four users ranked the VR version as the one that offered the most compelling experience. The fourth user, who ranked the AR version as such, indicated a preference towards being able to mix the virtual audio elements with real ones. </p>
         <p>With regards to the problematic aspects in either platform, one user reported that they had wanted to move the cones on an object that was moving on a trajectory and that they were not able to do so. The same user reported some of the AR objects would momentarily disappear from their view; this is likely due to the tablet device losing tracking of the planar surfaces, which the placement of the objects are based on. Another user mentioned that modifying objects with one hand while holding the tablet with the other felt cumbersome at times.</p>
-        
+
         <div class="section">Conclusions</div>
-        <p class="firstParagraph">In this paper, we discussed our ongoing work on a suite of tools for immersive audio design called Inviso XR. We believe that this suite can support creative workflows in many situations including artistic performances, content creation, VR and audio education, and architectural prototyping. Our preliminary findings with users indicate that the UI elements in the VR version require a learning process. Despite this, the VR experience was found to offer the most compelling experience overall with a user preference towards the first-person perspective into the sonic environment. On the AR and desktop versions, the users' familiarity with desktop and touch interactions facilitated their design processes. The mapping between the sounds and visuals were generally found to be convincing with the desktop version being ranked as the easiest to use although there was a clear preference towards the spatial mapping afforded by the AR and VR versions.</p>
-        <p>Based on our findings, we plan to continue exploring intuitive interaction methods for the VR version that mitigates to need for experience with VR UIs. Furthermore, we plan to explore distant modification techniques so as to allow the user to design more expansive environments. In the near future, we also hope to implement real-time networked communications between the different components of the Inviso XR Suite. This will enable multi-user creative and instructional experiences: for instance, a user working with a VR headset will collaborate with a remotely-located user who is working on the same design with a tablet in room-scale AR while a third user contributes to the design on a desktop computer.</p>
-        
+        <p class="firstParagraph">In this paper, we discussed our ongoing work
+        on a suite of tools for immersive audio design called Inviso XR. We
+        believe that this suite can support creative workflows in many
+        situations including artistic performances, content creation, VR and
+        audio education, and architectural prototyping. Our preliminary findings
+        with users indicate that the UI elements in the VR version require a
+        learning process. Despite this, the VR experience was found to offer the
+        most compelling experience overall with a user preference towards the
+        first-person perspective into the sonic environment. On the AR and
+        desktop versions, the users' familiarity with desktop and touch
+        interactions facilitated their design processes. The mapping between the
+        sounds and visuals were generally found to be convincing with the
+        desktop version being ranked as the easiest to use although there was a
+        clear preference towards the spatial mapping afforded by the AR and VR
+        versions. In the near future, we also hope to implement real-time
+        networked communications between the different components of the Inviso
+        XR Suite. This will enable multi-user creative and instructional
+        experiences: for instance, a user working with a VR headset will
+        collaborate with a remotely-located user who is working on the same
+        design with a tablet in room-scale AR while a third user contributes to
+        the design on a desktop computer.</p>
+
         <div class="section">References</div>
         <table style="margin-top: 2px; padding: 0">
             <tr>
@@ -207,7 +219,7 @@
 
             <tr>
                 <td class="num">[2]<a name="2"></a></td>
-                <td class="cite">T. Carpentier. Binaural synthesis with the Web Audio 
+                <td class="cite">T. Carpentier. Binaural synthesis with the Web Audio
                     API. In <i>Proceedings of the 1st Web Audio Conference</i>,
                     January 2015.
                 </td>
@@ -223,9 +235,9 @@
 
             <tr>
                 <td class="num">[4]<a name="4"></a></td>
-                <td class="cite"> D. Jordan, F. Müller, C. Drude, S. Reinhold,     
+                <td class="cite"> D. Jordan, F. Müller, C. Drude, S. Reinhold,
                      V. Schomakers, and M. Teistler. Spatial audio
-                    engineering in a virtual reality environment. In 
+                    engineering in a virtual reality environment. In
                     W. Prinz, J. Borchers, and M. Jarke, editors, <i>Mensch
                     und Computer 2016 - Tagungsband</i>, Aachen, 2016.
                     Gesellschaft für Informatik e.V.</td>
@@ -254,7 +266,7 @@
                 <td class="cite">R. Penha and J. Oliveira. Spatium, tools for sound
                     spatialization. In <i>Proceedings of the Sound and Music
                     Computing Conference</i>, pages 660–667, 2013</td>
-            </tr>           
+            </tr>
         </table>
 
         <a href="#top">Return to the top</a>
