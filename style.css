@@ -11,6 +11,7 @@ body {
 	vertical-align: baseline;
 	line-height: 1;
 	background-color:#EEE;
+	color: #000;
 }
 
 @media (min-aspect-ratio: 3375/5175) {
@@ -25,6 +26,11 @@ body {
 		background-attachment:fixed;
 		background-blend-mode:darken;
 	}
+}
+
+.notification{
+	color: #ff0073;
+	font-weight: bold;
 }
 
 #title{
